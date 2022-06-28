@@ -9,12 +9,6 @@ import { useHistory } from "react-router-dom";
 
 const Dashboard: React.FC = () => {
   const history = useHistory();
-  const goToLinkedIn = () => {
-    const a = document.createElement("a");
-    a.target = "_blank";
-    a.href = "https://www.linkedin.com/in/mubbashir10/";
-    a.click();
-  };
 
   const handleLogout = async () => {
     try {
@@ -29,17 +23,6 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <LockIcon /> <p>This is a private (auth protected) page. </p>
-      <p style={{ fontSize: 12, marginBottom: "20px" }}>
-        Thanks for following along, happy coding!{" "}
-      </p>
-      <Button
-        variant="contained"
-        color="primary"
-        style={{ marginRight: "20px" }}
-        onClick={goToLinkedIn}
-      >
-        <LinkedInIcon /> My LinkedIn Profile
-      </Button>
       <Button variant="contained" color="default" onClick={handleLogout}>
         <ExitToAppIcon /> Logout
       </Button>

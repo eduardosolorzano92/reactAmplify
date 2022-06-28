@@ -34,7 +34,7 @@ const Signup: React.FC = () => {
       Toast("Success!!", "Login Successfully", "success");
       history.push("/");
     } catch (error) {
-      Toast("Error!!", '', "danger");
+      Toast("Error!!", error.message, "danger");
     }
     setLoading(false);
   };
